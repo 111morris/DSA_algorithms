@@ -10,6 +10,14 @@ Repeatedly steps through the list, compares adjacent elements and swaps them if 
 * **Space Complexity** : O(1)
 * **Stable** : Yes
 
+### Cyclic Sort
+
+Iterates through the array and places each element at its correct index (value - 1) by swapping. Ideal for range 1 to N.
+
+* **Time Complexity** : O(n)
+* **Space Complexity** : O(1)
+* **Stable** : No
+
 ### Selection Sort
 
 Divides the input list into two parts: a sorted sublist built from left to right and an unsorted sublist. Repeatedly selects the smallest element from the unsorted portion and moves it to the sorted portion.
@@ -88,6 +96,7 @@ Distributes elements into several buckets, sorts each bucket individually (often
 * `src/BubbleSort.java`
 * `src/SelectionSort.java`
 * `src/InsertionSort.java`
+* `src/CyclicSort.java`
 * `src/QuickSort.java`
 * `src/MergeSort.java`
 * `src/CountingSort.java`
