@@ -1,7 +1,7 @@
 package src;
 
 public class BST {
- class Node {
+ static class Node {
   int key;
   Node left, right;
 
