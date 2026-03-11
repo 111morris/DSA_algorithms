@@ -59,6 +59,23 @@ public class BST {
 
   return searchRec(root.right, key);
  }
+ 
+ void preorderRec(Node root) {
+  if (root != null) {
+   System.out.println(root.key);
+   preorderRec(root.left);
+   preorderRec(root.right);
+  }
+ }
+
+ // postorder 
+ void postorderRec(Node root) {
+  if (root != null) {
+   postorderRec(root.left);
+   postorderRec(root.right);
+   System.out.println(root.key);
+  }
+ }
 
  public static void main(String[] args) {
   BST tree = new BST();
