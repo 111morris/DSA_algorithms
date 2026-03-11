@@ -46,6 +46,20 @@ public class BST {
   }
  }
 
+ boolean search(int key) {
+  return searchRec(root, key) != null;
+ }
+
+ Node searchRec(Node root, int key) {
+  if (root == null || root.key == key)
+   return root;
+
+  if (key < root.key)
+   return searchRec(root.left, key);
+
+  return searchRec(root.right, key);
+ }
+
  public static void main(String[] args) {
   BST tree = new BST();
   tree.insert(50);
@@ -58,5 +72,8 @@ public class BST {
 
   System.out.println("Inorder traversal:");
   tree.inorder();
+
+  System.out.println("Search 40: " + tree.search(40));
+  System.out.println("Search 100: " + tree.search(100));
  }
 }
